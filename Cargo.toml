@@ -1,0 +1,7 @@
+[package]
+name = "impel"
+version = "0.1.0"
+authors = ["Aliou Diallo <code@aliou.me>"]
+edition = "2018"
+
+[dependencies]
