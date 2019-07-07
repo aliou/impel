@@ -4,11 +4,7 @@ use colored::*;
 mod impel;
 
 fn main() {
-    println!("{}", impel())
-}
-
-fn impel() -> String {
-    return format!(
+    println!(
         "{hostname}: {cwd} {vcs}{vim}{pchar} ",
         hostname = impel::hostname().color("red").bold(),
         cwd = impel::working_directory(),

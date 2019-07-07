@@ -7,6 +7,7 @@ pub fn git_info() -> String {
         Ok(repo) => repo,
         Err(_) => return String::from(""),
     };
+
     return format!(
         "[{branch_name}{dirty}]{stashed}{wip} ",
         branch_name = branch_name(&repo),
