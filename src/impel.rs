@@ -6,9 +6,9 @@ use std::path::Path;
 mod vcs;
 
 pub fn hostname() -> String {
-    return match hostname::get_hostname() {
-        None => String::from(""),
-        Some(hs) => hs,
+    return match hostname::get() {
+        Err(_e) => String::from(""),
+        Ok(hs) => hs.to_str().unwrap_or("".into()).to_string(),
     };
 }
 
